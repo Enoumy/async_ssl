@@ -24,13 +24,14 @@
   (language c)
   (names ffi_generated_stubs)
   (flags
-   (:standard \ -Werror -pedantic -Wall -Wunused)
+   (:standard -Werror -pedantic -Wall -Wunused
+    -Wno-incompatible-pointer-types)
    -w
    (:include ../bindings/openssl-ccopt.sexp)))
  (name async_ssl)
  (public_name async_ssl)
  (modules import version opt verify_mode ffi_generated_types ffi_generated
-   ffi__library_must_be_initialized rfc3526 ssl initialize std config tls)
+  ffi__library_must_be_initialized rfc3526 ssl initialize std config tls)
  (flags :standard -w -9-27-32-34)
  (c_library_flags
   :standard
